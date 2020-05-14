@@ -31,7 +31,7 @@ export default function AddPizzaForm() {
       <h2>Add a new pizza</h2>
       <p>
         <label>
-          Name:{" "}
+          Name:
           <input
             type="text"
             value={name}

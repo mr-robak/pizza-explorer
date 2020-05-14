@@ -2,6 +2,7 @@
 const initialState = {
   user: {
     name: "Helva",
+    favorites: [161235, 67283],
   },
   pizzas: [
     {
@@ -45,6 +46,25 @@ export default function reducer(state = initialState, action) {
         ],
       };
     }
+    case "TOGGLE_FAVORITE_PIZZA": {
+      const newLike = action.payload;
+      const oldFavorites = [...state.user.favorites];
+      if (oldFavorites.find((id) => id === newLike)) {
+        return {
+          ...state,
+          user: {
+            ...state.user,
+            favorites: oldFavorites.filter((id) => id !== newLike),
+          },
+        };
+      } else {
+        return {
+          ...state,
+          user: { ...state.user, favorites: [...oldFavorites, newLike] },
+        };
+      }
+    }
+
     default: {
       return state;
     }
