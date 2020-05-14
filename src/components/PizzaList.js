@@ -7,7 +7,7 @@ const selectUser = (reduxState) => {
 
 const selectPizzas = (reduxState) => {
   const sortedPizzass = reduxState.pizzas.sort((pizzaA, pizzaB) => {
-    return pizzaA.bought - pizzaB.bought;
+    return pizzaB.bought - pizzaA.bought;
   });
   return sortedPizzass;
 };
@@ -19,7 +19,7 @@ export default function PizzaList() {
     const { id, name, description, bought } = pizza;
     return (
       <li key={id}>
-        {name} - <span>{description}</span> - {bought}
+        <strong>{name}</strong> - {description} - Bought: {bought}
       </li>
     );
   });
