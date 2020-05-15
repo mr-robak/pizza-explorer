@@ -1,13 +1,12 @@
 // src/components/AddPizzaForm.js
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import reducer from "../store/reducer";
 
 export default function AddPizzaForm() {
   const [name, set_name] = useState("");
   const [description, set_description] = useState("");
 
-  const dispatch = useDispatch(reducer);
+  const dispatch = useDispatch();
 
   const submit = (event) => {
     // to make sure that the form does not redirect (which is normal browser behavior)

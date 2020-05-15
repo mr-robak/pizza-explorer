@@ -1,6 +1,5 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import reducer from "../store/reducer";
 
 const selectUser = (reduxState) => {
   return reduxState.user;
@@ -13,12 +12,8 @@ const selectPizzas = (reduxState) => {
   return sortedPizzass;
 };
 
-const selectLiked = (reduxState) => {
-  return;
-};
-
 export default function PizzaList() {
-  const dispatch = useDispatch(reducer);
+  const dispatch = useDispatch();
 
   const user = useSelector(selectUser);
   const pizzas = useSelector(selectPizzas);

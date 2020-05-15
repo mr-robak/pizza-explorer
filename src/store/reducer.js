@@ -11,6 +11,7 @@ const initialState = {
       description:
         "The typical Neapolitan pizza, made with San Marzano tomatoes, mozzarella cheese, fresh basil, salt and extra-virgin olive oil.",
       bought: 5,
+      ingredients: ["tomatoes", "mozzarella", "basil", "oil"],
     },
     {
       id: 67283,
@@ -18,6 +19,7 @@ const initialState = {
       description:
         "Neapolitan pizza also known as Naples-style pizza, is a style of pizza made with tomatoes and mozzarella cheese.",
       bought: 2,
+      ingredients: ["tomatoes", "mozzarella", "oil"],
     },
     {
       id: 357311,
@@ -25,6 +27,7 @@ const initialState = {
       description:
         "White pizza, which omits tomato sauce from the equation, often substituting it with pesto or sour cream.",
       bought: 10,
+      ingredients: ["ricotta", "mozzarella", "garlic"],
     },
   ],
 };
